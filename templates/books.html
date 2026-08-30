@@ -1,0 +1,88 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books</title>
+    <!-- style links -->
+    <link rel="stylesheet" href="{% static 'css/books_style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-- fonts link -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar">
+        <a href="{% url 'index' %}">Main</a>
+        <a href="{% url 'login' %}">Sign In</a>
+        <a href="{% url 'signup' %}">Sign Up</a>
+        <a href="{% url 'books' %}">Books</a>
+        <a href="{% url 'cart' %}">purchases</a>
+        <a href="{% url 'user_profile' %}">User profile</a>
+        <a href="{% url 'contact' %}">About Us</a>
+    </nav>
+    <div class="container">
+        <header class="header">
+            <div class="logo"><a href="{% url 'index' %}">Inkwave</a></div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search your favourite books">
+            </div>
+            <div class="user-profile">
+                <div class="profile-icon"><a href="{% url 'user_profile' %}"><img src="{% static 'assets/av2.jpg' %}" alt=""></a></div>
+                <span></span>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <section class="recommended">
+                <div class="section-header">
+                    <h2>Recommended</h2>
+                    <a href="{% url 'all_books' %}" class="see-all">See All</a>
+                </div>
+                <div class="book-list">
+                    <!-- Books will be populated by JavaScript -->
+                </div>
+            </section>
+            <section class="Best-Author">
+                <div class="section-header">
+                    <h2>Best Author in 2025</h2>
+                    <a href="{% url 'all_books' %}" class="see-all">See All</a>
+                </div>
+                <div class="book-list">
+                    <!-- Books will be populated by JavaScript -->
+                </div>
+            </section>
+
+            <!-- Categories Section -->
+            <section class="categories">
+                <div class="section-header">
+                    <h2>Categories</h2>
+                    <div class="category-filters">
+                        <button class="filter-btn active">All</button>
+                        <button class="filter-btn">Sci-Fi</button>
+                        <button class="filter-btn">Fantasy</button>
+                        <button class="filter-btn">Drama</button>
+                        <button class="filter-btn">Business</button>
+                        <button class="filter-btn">Education</button>
+                        <button class="filter-btn">Geography</button>
+                    </div>
+                </div>
+                <div class="book-grid">
+                    <!-- Books will be populated by JavaScript -->
+                </div>
+            </section>
+        </main>
+    </div>
+    <footer class="footer">
+        <a href="#" target="_blank">
+            <p>2025 &copy; Basil Mohamed, All Rights reserved</p>
+        </a>
+    </footer>
+
+    <script src="{% static 'javascript/Books.js' %}"></script>
+</body>
+
+</html>
