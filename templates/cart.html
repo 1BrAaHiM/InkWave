@@ -1,63 +1,120 @@
-{% load static %}
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Your Borrow List</title>
-  <link rel="stylesheet" href="{% static 'css/purshes_style.css' %}" />
-  <link rel="stylesheet" href="{% static 'css/style.css' %}" />
-  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+
+  <!-- CSS -->
+
+  <link rel="stylesheet" href="static/css/purshes_style.css" />
+  <link rel="stylesheet" href="static/css/style.css" />
+
+  <!-- Remix Icons -->
+
+  <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+  />
 </head>
 
 <body>
+
+  <!-- Navigation -->
+
   <nav class="navbar">
-    <a href="{% url 'index' %}">Main</a>
-    <a href="{% url 'login' %}">Sign In</a>
-    <a href="{% url 'signup' %}">Sign Up</a>
-    <a href="{% url 'books' %}">Books</a>
-    <a href="{% url 'cart' %}">Purchases</a>
-    <a href="{% url 'user_profile' %}">User Profile</a>
-    <a href="{% url 'contact' %}">About Us</a>
+    <a href="index.html">Main</a>
+    <a href="signin.html">Sign In</a>
+    <a href="signup.html">Sign Up</a>
+    <a href="books.html">Books</a>
+    <a href="cart.html">Purchases</a>
+    <a href="user_profile.html">User Profile</a>
+    <a href="contact.html">About Us</a>
   </nav>
+
   <!-- Header -->
+
   <header>
-    <a href="{% url 'index' %}" class="logo">InkWave</a>
-    <a href="{% url 'cart' %}" class="cart-icon">
-      <i class="ri-book-2-line"></i>
-      <span class="cart-item-count">0</span>
-    </a>
+
+```
+<a href="index.html" class="logo">
+  InkWave
+</a>
+
+<a href="cart.html" class="cart-icon">
+
+  <i class="ri-book-2-line"></i>
+
+  <span class="cart-item-count">
+    0
+  </span>
+
+</a>
+```
+
   </header>
 
   <!-- Cart Page Content -->
-  <main class="cart-page">
-    <h2 class="cart-title">Your Books List</h2>
-    <div id="cart-items">
-      <!-- Cart items will be dynamically added here -->
-    </div>
 
-    <!-- Summary -->
-    <div class="order-summary">
-      <div class="total-items">
-        <span>Total Items:</span>
-        <span id="total-items-count">0</span>
-      </div>
-      <div class="total-price">
-        <span>Total Price:</span>
-        <span id="total-price-amount">$0.00</span>
-      </div>
-      <button class="btn-buy" id="confirm-request-btn">Confirm Request</button>
-    </div>
+  <main class="cart-page">
+
+```
+<h2 class="cart-title">
+  Your Books List
+</h2>
+
+<div id="cart-items">
+  <!-- Cart items will be dynamically added here -->
+</div>
+
+
+<!-- Summary -->
+<div class="order-summary">
+
+  <div class="total-items">
+    <span>Total Items:</span>
+    <span id="total-items-count">0</span>
+  </div>
+
+  <div class="total-price">
+    <span>Total Price:</span>
+    <span id="total-price-amount">$0.00</span>
+  </div>
+
+  <button
+    class="btn-buy"
+    id="confirm-request-btn"
+  >
+    Confirm Request
+  </button>
+
+</div>
+```
+
   </main>
 
+  <!-- Footer -->
+
   <footer class="footer">
-    <a href="#">
-      <p>2025 © Abdelrahman Mohsen, All Rights Reserved</p>
-    </a>
+
+```
+<a href="#">
+
+  <p>
+    2025 © Abdelrahman Mohsen, All Rights Reserved
+  </p>
+
+</a>
+```
+
   </footer>
 
-  <script src="{% static 'javascript/cart.js' %}"></script>
+  <!-- JavaScript -->
+
+  <script src="static/javascript/cart.js"></script>
+
 </body>
 
 </html>

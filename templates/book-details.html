@@ -1,64 +1,153 @@
-{% load static %}
-
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Book Details</title>
-  <!-- fonts link -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <!-- style link -->
-  <link rel="stylesheet" href="{% static 'css/book_details_style.css' %}">
-  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+  <!-- Fonts -->
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- CSS -->
+
+  <link rel="stylesheet" href="static/css/book_details_style.css" />
+  <link rel="stylesheet" href="static/css/style.css" />
 </head>
 
 <body>
+
+  <!-- Navigation -->
+
   <nav class="navbar">
-    <a href="{% url 'index' %}">Main</a>
-    <a href="{% url 'login' %}">Sign In</a>
-    <a href="{% url 'signup' %}">Sign Up</a>
-    <a href="{% url 'books' %}">Books</a>
-    <a href="{% url 'cart' %}">purchases</a>
-    <a href="{% url 'user_profile' %}">User profile</a>
-    <a href="{% url 'contact' %}">About Us</a>
+    <a href="index.html">Main</a>
+    <a href="signin.html">Sign In</a>
+    <a href="signup.html">Sign Up</a>
+    <a href="books.html">Books</a>
+    <a href="cart.html">Purchases</a>
+    <a href="user_profile.html">User Profile</a>
+    <a href="contact.html">About Us</a>
   </nav>
+
+  <!-- Book Details -->
+
   <div class="container">
-    <div class="book-container">
-      <div class="book-image-container">
-        <img src="" alt="Book Cover" class="book-image" />
-      </div>
-      <div class="book-details-container">
-        <div class="book-title">Book Title</div>
-        <div class="book-detail"><strong>Author:</strong> Unknown Author</div>
-        <div class="book-detail"><strong>Category:</strong> General</div>
-        <div class="book-detail"><strong>Description:</strong> No description available.</div>
-        <div class="book-detail"><strong>Status:</strong> Available</div>
-        <div class="price-section">
-          <div>Borrow Price: $0.00</div>
-          <div>Buy Price: $0.00</div>
-        </div>
-        <div class="dropdown-section">
-          <label for="option">Choose an option:</label>
-          <select id="option">
-            <option value="">-- Select --</option>
-            <option value="borrow">Borrow</option>
-            <option value="buy">Buy</option>
-          </select>
-          <div class="price-box">
-            * Please choose an option to proceed.
-          </div>
-          <button class="confirm-btn" disabled>Confirm</button>
-        </div>
-      </div>
-    </div>
+
+```
+<div class="book-container">
+
+  <div class="book-image-container">
+    <img
+      src=""
+      alt="Book Cover"
+      class="book-image"
+    />
   </div>
-  <footer class="footer" style="background-color: transparent;">
+
+
+  <div class="book-details-container">
+
+    <div class="book-title">
+      Book Title
+    </div>
+
+    <div class="book-detail">
+      <strong>Author:</strong> Unknown Author
+    </div>
+
+    <div class="book-detail">
+      <strong>Category:</strong> General
+    </div>
+
+    <div class="book-detail">
+      <strong>Description:</strong>
+      No description available.
+    </div>
+
+    <div class="book-detail">
+      <strong>Status:</strong> Available
+    </div>
+
+
+    <div class="price-section">
+
+      <div>
+        Borrow Price: $0.00
+      </div>
+
+      <div>
+        Buy Price: $0.00
+      </div>
+
+    </div>
+
+
+    <div class="dropdown-section">
+
+      <label for="option">
+        Choose an option:
+      </label>
+
+      <select id="option">
+
+        <option value="">
+          -- Select --
+        </option>
+
+        <option value="borrow">
+          Borrow
+        </option>
+
+        <option value="buy">
+          Buy
+        </option>
+
+      </select>
+
+
+      <div class="price-box">
+        * Please choose an option to proceed.
+      </div>
+
+
+      <button
+        class="confirm-btn"
+        disabled
+      >
+        Confirm
+      </button>
+
+    </div>
+
+  </div>
+
+</div>
+```
+
+  </div>
+
+  <!-- Footer -->
+
+  <footer
+    class="footer"
+    style="background-color: transparent;"
+  >
     <a href="#" target="_blank">
-      <p>2025 © Basma, All Rights Reserved</p>
+      <p>
+        2025 © Basma, All Rights Reserved
+      </p>
     </a>
   </footer>
-  <script src="{% static 'javascript/book_details.js' %}"></script>
+
+  <!-- JavaScript -->
+
+  <script src="static/javascript/book_details.js"></script>
+
 </body>
 
 </html>
