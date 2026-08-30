@@ -1,5 +1,3 @@
-{% load static %}
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,19 +7,19 @@
   <!-- fonts link -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <!-- style link -->
-  <link rel="stylesheet" href="{% static 'css/book_details_style.css' %}">
-  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="static/css/book_details_style.css">
+  <link rel="stylesheet" href="static/css/style.css">
 </head>
 
 <body>
   <nav class="navbar">
-    <a href="{% url 'index' %}">Main</a>
-    <a href="{% url 'login' %}">Sign In</a>
-    <a href="{% url 'signup' %}">Sign Up</a>
-    <a href="{% url 'books' %}">Books</a>
-    <a href="{% url 'cart' %}">purchases</a>
-    <a href="{% url 'user_profile' %}">User profile</a>
-    <a href="{% url 'contact' %}">About Us</a>
+    <a href="index.html">Main</a>
+    <a href="signin.html">Sign In</a>
+    <a href="signup.html">Sign Up</a>
+    <a href="books.html">Books</a>
+    <a href="cart.html">purchases</a>
+    <a href="user_profile.html">User profile</a>
+    <a href="contact.html">About Us</a>
   </nav>
   <div class="container">
     <div class="book-container">
@@ -58,7 +56,7 @@
       <p>2025 © Basma, All Rights Reserved</p>
     </a>
   </footer>
-  <script src="{% static 'javascript/book_details.js' %}"></script>
+  <script src="static/javascript/book_details.js"></script>
 </body>
 
 </html>

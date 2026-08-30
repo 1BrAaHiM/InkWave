@@ -25,7 +25,7 @@ function sendcompliancemail() {
 
     if (!isLoggedIn) {
         alert("Please log in to submit feedback.");
-        window.location.href = "/login/";
+        window.location.href = "signin.html";
         return;
     }
 

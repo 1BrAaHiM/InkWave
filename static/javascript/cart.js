@@ -91,7 +91,7 @@ document.addEventListener("DOMContentLoaded", function () {
         confirmRequestBtn.addEventListener("click", function () {
             if (!isLoggedIn) {
                 alert("Please log in to confirm your request.");
-                window.location.href = "/login/";
+                window.location.href = "signin.html";
                 return;
             }
 

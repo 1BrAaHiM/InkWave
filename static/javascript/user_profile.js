@@ -352,7 +352,7 @@ document.addEventListener("DOMContentLoaded", function () {
             try {
                 alert("Logged out successfully!");
                 localStorage.setItem("loggedIn", "false");
-                window.location.href = "/";
+                window.location.href = "index.html";
             } catch (e) {
                 console.error("Error logging out:", e);
                 alert("Failed to log out.");
@@ -367,7 +367,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     alert("Account deleted successfully!");
                     localStorage.removeItem("user");
                     localStorage.setItem("loggedIn", "false");
-                    window.location.href = "/";
+                    window.location.href = "index.html";
                 } catch (e) {
                     console.error("Error deleting account:", e);
                     alert("Failed to delete account.");

@@ -1,4 +1,3 @@
-{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,25 +5,25 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Your Borrow List</title>
-  <link rel="stylesheet" href="{% static 'css/purshes_style.css' %}" />
-  <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  <link rel="stylesheet" href="static/css/purshes_style.css" />
+  <link rel="stylesheet" href="static/css/style.css" />
   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
 </head>
 
 <body>
   <nav class="navbar">
-    <a href="{% url 'index' %}">Main</a>
-    <a href="{% url 'login' %}">Sign In</a>
-    <a href="{% url 'signup' %}">Sign Up</a>
-    <a href="{% url 'books' %}">Books</a>
-    <a href="{% url 'cart' %}">Purchases</a>
-    <a href="{% url 'user_profile' %}">User Profile</a>
-    <a href="{% url 'contact' %}">About Us</a>
+    <a href="index.html">Main</a>
+    <a href="signin.html">Sign In</a>
+    <a href="signup.html">Sign Up</a>
+    <a href="books.html">Books</a>
+    <a href="cart.html">Purchases</a>
+    <a href="user_profile.html">User Profile</a>
+    <a href="contact.html">About Us</a>
   </nav>
   <!-- Header -->
   <header>
-    <a href="{% url 'index' %}" class="logo">InkWave</a>
-    <a href="{% url 'cart' %}" class="cart-icon">
+    <a href="index.html" class="logo">InkWave</a>
+    <a href="cart.html" class="cart-icon">
       <i class="ri-book-2-line"></i>
       <span class="cart-item-count">0</span>
     </a>
@@ -57,7 +56,7 @@
     </a>
   </footer>
 
-  <script src="{% static 'javascript/cart.js' %}"></script>
+  <script src="static/javascript/cart.js"></script>
 </body>
 
 </html>

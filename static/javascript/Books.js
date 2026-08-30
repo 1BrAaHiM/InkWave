@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", async function () {
             const bookId = book.id || '';
 
             return `
-                <a href="/book-details/?bookId=${encodeURIComponent(bookId)}">
+                <a href="book-details.html?bookId=${encodeURIComponent(bookId)}">
                     <div class="book-card">
                         <img src="${imageUrl}" alt="${volumeInfo.title || 'Book'}">
                         <h3>${title}</h3>
@@ -100,14 +100,14 @@ document.addEventListener("DOMContentLoaded", async function () {
 
         bestAuthorSection.innerHTML = books.map((book) => {
             const volumeInfo = book.volumeInfo || {};
-            const imageUrl = volumeInfo.imageLinks?.thumbnail || "assets/default_book.jpg";
+            const imageUrl = volumeInfo.imageLinks?.thumbnail || "assets/background.jpg";
             const title = volumeInfo.title?.length > 20 ? volumeInfo.title.substring(0, 17) + "..." : volumeInfo.title || "Unknown Title";
             const author = volumeInfo.authors?.[0] || "Unknown Author";
             const rating = volumeInfo.averageRating ? `★★★★★ ${volumeInfo.averageRating}` : "★★★★★ 4.0";
             const bookId = book.id || '';
 
             return `
-                <a href="/book-details/?bookId=${encodeURIComponent(bookId)}">
+                <a href="book-details.html?bookId=${encodeURIComponent(bookId)}">
                     <div class="book-card">
                         <img src="${imageUrl}" alt="${volumeInfo.title || 'Book'}">
                         <h3>${title}</h3>
@@ -207,13 +207,13 @@ document.addEventListener("DOMContentLoaded", async function () {
     function displayCategoryBooks(books) {
         bookGrid.innerHTML = books.map((book) => {
             const volumeInfo = book.volumeInfo || {};
-            const imageUrl = volumeInfo.imageLinks?.thumbnail || "assets/default_book.jpg";
+            const imageUrl = volumeInfo.imageLinks?.thumbnail || "assets/background.jpg";
             const title = volumeInfo.title?.length > 20 ? volumeInfo.title.substring(0, 17) + "..." : volumeInfo.title || "Unknown Title";
             const author = volumeInfo.authors?.[0] || "Unknown Author";
             const bookId = book.id || '';
 
             return `
-                <a href="/book-details/?bookId=${encodeURIComponent(bookId)}">
+                <a href="book-details.html?bookId=${encodeURIComponent(bookId)}">
                     <div class="book-card">
                         <img src="${imageUrl}" alt="${volumeInfo.title || 'Book'}">
                         <h3>${title}</h3>

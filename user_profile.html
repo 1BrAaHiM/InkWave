@@ -1,4 +1,3 @@
-{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,19 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>User-Profile</title>
     <!-- style link -->
-    <link rel="stylesheet" href="{% static 'css/user_profile_style.css' %}" />
+    <link rel="stylesheet" href="static/css/user_profile_style.css" />
 </head>
 
 <body>
     <div class="page-wrapper">
         <nav class="navbar">
-            <a href="{% url 'index' %}">Main</a>
-            <a href="{% url 'login' %}">Sign In</a>
-            <a href="{% url 'signup' %}">Sign Up</a>
-            <a href="{% url 'books' %}">Books</a>
-            <a href="{% url 'cart' %}">purchases</a>
-            <a href="{% url 'user_profile' %}">User profile</a>
-            <a href="{% url 'contact' %}">About Us</a>
+            <a href="index.html">Main</a>
+            <a href="signin.html">Sign In</a>
+            <a href="signup.html">Sign Up</a>
+            <a href="books.html">Books</a>
+            <a href="cart.html">purchases</a>
+            <a href="user_profile.html">User profile</a>
+            <a href="contact.html">About Us</a>
         </nav>
         <div class="container">
             <h4 class="title">Account settings</h4>
@@ -52,7 +51,7 @@
                         <!-- General Tab -->
                         <div class="tab tab1">
                             <div class="profile-section">
-                                <img src="{% static 'assets/av2.jpg' %}" alt="Profile" class="profile-img" />
+                                <img src="static/assets/av2.jpg" alt="Profile" class="profile-img" />
                                 <div class="profile-actions">
                                     <label class="btn btn-outline-primary">
                                         Upload new photo
@@ -284,7 +283,7 @@
                                 </div>
                                 <div class="action-buttons">
                                     <button type="button" class="btn btn-primary delete-book-btn">Delete Book</button>
-                                    <a href="{% url 'books' %}" class="btn btn-default">View Book List</a>
+                                    <a href="books.html" class="btn btn-default">View Book List</a>
                                 </div>
                             </div>
                         </div>
@@ -310,7 +309,7 @@
             </a>
         </footer>
     </div>
-    <script src="{% static 'javascript/user_profile.js' %}"></script>
+    <script src="static/javascript/user_profile.js"></script>
 </body>
 
 </html>

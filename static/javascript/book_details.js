@@ -99,7 +99,7 @@ document.addEventListener("DOMContentLoaded", async function () {
                 }
                 if (!isLoggedIn) {
                     alert("Please log in to proceed with this action.");
-                    window.location.href = "/login/";
+                    window.location.href = "signin.html";
                     return;
                 }
 
@@ -113,12 +113,12 @@ document.addEventListener("DOMContentLoaded", async function () {
                 addToCart(bookToAdd);
 
                 alert(`You have chosen to ${select.value} "${bookData.title}" for $${select.value === "borrow" ? bookData.borrowPrice : bookData.buyPrice}. Added to cart!`);
-                confrimed = confirm("Do you want to spend now ?");
-                if(confrimed){
-                    window.location.href = "/cart/";
+                const confirmed = confirm("Do you want to spend now ?");
+                if(confirmed){
+                    window.location.href = "cart.html";
                 }
                 else{
-                    window.location.href = "/books/"
+                    window.location.href = "books.html"
                 }
             });
         }

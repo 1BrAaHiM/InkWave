@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (buttonsDiv) {
             buttonsDiv.innerHTML = `
                 <div class="user-info" style="display:flex;justify-content: center;align-items: center;gap:20px">
-                    <a href="/profile/"><img src="${savedUser?.profilePhoto || 'assets/av2.jpg'}" alt="User Avatar" class="avatar" style="width: 40px;height: 40px;border-radius: 50%;"></a>
+                    <a href="user_profile.html"><img src="${savedUser?.profilePhoto || 'assets/av2.jpg'}" alt="User Avatar" class="avatar" style="width: 40px;height: 40px;border-radius: 50%;"></a>
                     <span class="username" style="font-size:20px;background-color:#336361;color:#f8f2e8;border-radius:5px;padding:10px">${username}</span>
                 </div>
             `;
@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     return `
                         <div class="book">
                             <div class="book-img">
-                                <a href="/book-details/?bookId=${encodeURIComponent(bookId)}"><img src="${imageUrl}" alt="${title}"></a>
+                                <a href="book-details.html?bookId=${encodeURIComponent(bookId)}"><img src="${imageUrl}" alt="${title}"></a>
                             </div>
                             <div class="book-description">
                                 <div class="book-details">
